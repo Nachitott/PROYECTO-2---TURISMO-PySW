@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destinos - Turismo Jujeño</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/destinos.css"> <link rel="stylesheet" href="../css/precios.css">
+</head>
+<body>
+
+    <div id="header-placeholder"></div>
+
+    <main class="py-5 bg-light" style="min-height: 80vh; margin-top: 50px;">
+        <div class="container mt-4">
+            
+            <h2 class="text-center fw-bold mb-4">Nuestros Destinos</h2>
+
+            <div class="text-center mb-5">
+                <button class="btn btn-primary filter-btn active" data-filter="todos">Todos</button>
+                <button class="btn btn-outline-primary filter-btn" data-filter="quebrada">Quebrada</button>
+                <button class="btn btn-outline-primary filter-btn" data-filter="puna">Puna</button>
+                <button class="btn btn-outline-primary filter-btn" data-filter="yungas">Yungas</button>
+            </div>
+
+            <div class="row g-4" id="galeria-destinos">
+                <div class="col-12 col-md-6 col-lg-4 item-destino quebrada">
+                    <div class="card h-100 shadow-sm card-destino">
+                        <img src="https://blog.rentennials.app/wp-content/uploads/2025/06/Purmamarca.jpg" class="card-img-top" alt="Purmamarca">
+                        <div class="card-body">
+                            <h5 class="card-title">Purmamarca</h5>
+                            <p class="card-text text-muted">Hogar del Cerro de los 7 Colores.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4 item-destino puna">
+                    <div class="card h-100 shadow-sm card-destino">
+                        <img src="https://cdn.prod.website-files.com/5edaacd12cbafceef29a5a9d/661012d239f60f07fcf6c2f9_salinas-grandes-despejado.jpg" class="card-img-top" alt="Salinas">
+                        <div class="card-body">
+                            <h5 class="card-title">Salinas Grandes</h5>
+                            <p class="card-text text-muted">El tercer salar más grande de Sudamérica.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4 item-destino yungas">
+                    <div class="card h-100 shadow-sm card-destino">
+                        <img src="https://adntravel.com.ar/wp-content/uploads/2026/03/cascada-de-agua-parque-nacional-calilegua.webp" class="card-img-top" alt="Calilegua">
+                        <div class="card-body">
+                            <h5 class="card-title">Parque Nacional Calilegua</h5>
+                            <p class="card-text text-muted">Selva de montaña con biodiversidad única.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="seccion-precios" class="mt-5 pt-5 border-top">
+                <h2 class="text-center fw-bold mb-2">Planes y Tarifas</h2>
+                <p class="text-center text-muted mb-5">Comparativa de paquetes y servicios incluidos.</p>
+
+                <div class="table-responsive tabla-precios bg-white shadow-sm rounded">
+                    <table class="table text-center mb-0">
+                        <thead>
+                            <tr>
+                                <th class="text-start">Paquete Turístico</th>
+                                <th>Alojamiento</th>
+                                <th>Excursiones</th>
+                                <th>Comidas</th>
+                                <th>Valor Final</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-start fw-bold">Escapada Express</td>
+                                <td>Hostel</td>
+                                <td>1 Excursión <i class="fa-solid fa-circle-info text-primary" data-bs-toggle="tooltip" title="Salinas Grandes o Quebrada."></i></td>
+                                <td>Desayuno</td>
+                                <td class="precio-destacado">$55.000</td>
+                                <td><button class="btn btn-sm btn-outline-primary rounded-pill btn-reservar" data-plan="Escapada Express">Reservar</button></td>
+                            </tr>
+                            <tr>
+                                <td class="text-start fw-bold">Aventura Clásica</td>
+                                <td>Hotel 3*</td>
+                                <td>3 Excursiones <i class="fa-solid fa-circle-info text-primary" data-bs-toggle="tooltip" title="Salinas, Quebrada y Pucará."></i></td>
+                                <td>Media Pensión</td>
+                                <td class="precio-destacado">$120.000</td>
+                                <td><button class="btn btn-sm btn-primary rounded-pill btn-reservar" data-plan="Aventura Clásica">Reservar</button></td>
+                            </tr>
+                            <tr>
+                                <td class="text-start fw-bold">Experiencia Puna VIP</td>
+                                <td>Hotel Boutique</td>
+                                <td>Full Access <i class="fa-solid fa-circle-info text-primary" data-bs-toggle="tooltip" title="Todas las excursiones + Guía privado."></i></td>
+                                <td>All Inclusive</td>
+                                <td class="precio-destacado">$280.000</td>
+                                <td><button class="btn btn-sm btn-outline-primary rounded-pill btn-reservar" data-plan="Experiencia Puna VIP">Reservar</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/scripts.js"></script>
+</body>
+</html>

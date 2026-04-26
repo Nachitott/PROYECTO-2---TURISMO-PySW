@@ -1,0 +1,58 @@
+/* --- EFECTO FLIP 3D --- */
+/* Le damos profundidad al contenedor para que el giro se vea real */
+.flip-container {
+    perspective: 1000px;
+    height: 350px;
+    margin-bottom: 20px;
+}
+
+/* El elemento que realmente gira */
+.flipper {
+    transition: transform 0.6s cubic-bezier(0.4, 0.2, 0.2, 1);
+    transform-style: preserve-3d;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* Acá ocurre la magia: cuando jQuery agregue la clase "flipped", rotamos 180 grados */
+.flip-container.flipped .flipper {
+    transform: rotateY(180deg);
+}
+
+/* Frente y Dorso de la tarjeta */
+.front, .back {
+    backface-visibility: hidden; /* Oculta la parte de atrás cuando está de frente */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* El dorso ya arranca girado 180 grados para estar "de espaldas" */
+.back {
+    transform: rotateY(180deg);
+    background-color: var(--gris-fondo);
+}
+
+/* --- SISTEMA DE ESTRELLAS --- */
+.star-rating {
+    font-size: 1.5rem;
+    color: #ccc; /* Estrellas grises por defecto */
+    cursor: pointer;
+}
+
+/* Clases que agregará jQuery */
+.star-rating .fa-star.hovered,
+.star-rating .fa-star.checked {
+    color: #ffc107; /* Amarillo brillante */
+    text-shadow: 0 0 5px rgba(255, 193, 7, 0.5);
+}

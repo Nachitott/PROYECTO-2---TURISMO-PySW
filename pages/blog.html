@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Turismo Jujeño</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/blog.css">
+</head>
+<body>
+
+    <div id="header-placeholder"></div>
+
+    <main class="py-5 bg-light" style="min-height: 80vh; margin-top: 50px;">
+        <div class="container mt-4">
+            
+            <h2 class="text-center fw-bold mb-4 reveal">Diario de Viaje</h2>
+            <p class="text-center text-muted mb-5 reveal">Novedades, cultura y tips para tu próxima aventura.</p>
+
+            <div class="text-center mb-5 reveal">
+                <button class="btn btn-dark filter-blog active" data-filter="todos">Últimas Noticias</button>
+                <button class="btn btn-outline-dark filter-blog" data-filter="cultura">Cultura</button>
+                <button class="btn btn-outline-dark filter-blog" data-filter="aventura">Aventura</button>
+            </div>
+
+            <div class="row g-4 mb-5">
+                
+                <div class="col-12 item-blog cultura reveal">
+                    <div class="card card-blog flex-md-row articulo-destacado overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1599839343720-b8764042c6c2?auto=format&fit=crop&q=80&w=800" class="card-img-left" alt="Carnaval">
+                        <div class="card-body p-4 d-flex flex-column justify-content-center">
+                            <span class="badge bg-primary align-self-start mb-2">Cultura</span>
+                            <h3 class="fw-bold">El Carnaval de Humahuaca: Una fiesta inolvidable</h3>
+                            <p class="text-muted">Descubrí los secretos del desentierro del diablo, las comparsas y la tradición que llena de color la Quebrada cada febrero.</p>
+                            <a href="#" class="btn btn-sm btn-outline-primary mt-auto align-self-start">Leer más</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 item-blog aventura reveal">
+                    <div class="card card-blog h-100">
+                        <img src="https://images.unsplash.com/photo-1623343444988-1f6305a27891?auto=format&fit=crop&q=80&w=400" class="card-img-top" alt="Trekking" style="height: 200px; object-fit: cover;">
+                        <div class="card-body">
+                            <span class="badge bg-warning text-dark mb-2">Aventura</span>
+                            <h5 class="card-title fw-bold">Trekking en las Salinas Grandes</h5>
+                            <p class="card-text text-muted">Todo lo que necesitas saber para caminar sobre el tercer salar más grande del mundo.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 item-blog cultura reveal">
+                    <div class="card card-blog h-100">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Cerro_de_los_Siete_Colores.jpg/800px-Cerro_de_los_Siete_Colores.jpg" class="card-img-top" alt="Artesanías" style="height: 200px; object-fit: cover;">
+                        <div class="card-body">
+                            <span class="badge bg-primary mb-2">Cultura</span>
+                            <h5 class="card-title fw-bold">La Ruta de los Artesanos</h5>
+                            <p class="card-text text-muted">Un recorrido por los telares y cerámicas más auténticos de Purmamarca y Tilcara.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row justify-content-center reveal">
+                <div class="col-md-8">
+                    <div class="card shadow-sm border-0 p-4">
+                        <h4 class="mb-4"><i class="fa-regular fa-comments text-primary me-2"></i>Comentarios</h4>
+                        
+                        <div id="lista-comentarios">
+                            <div class="mb-3 border-bottom pb-2">
+                                <strong>María Gómez:</strong> <span class="text-muted small ms-2">Hace 2 horas</span>
+                                <p class="mt-1 mb-0 text-secondary">¡Qué excelente información! Me sirvió muchísimo para planear mi viaje de egresados.</p>
+                            </div>
+                        </div>
+
+                        <form id="form-comentario" class="mt-4">
+                            <div class="input-group">
+                                <input type="text" id="nuevo-comentario" class="form-control" placeholder="Escribí un comentario..." required>
+                                <button class="btn btn-primary px-4" type="submit">Publicar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/scripts.js"></script>
+</body>
+</html>
