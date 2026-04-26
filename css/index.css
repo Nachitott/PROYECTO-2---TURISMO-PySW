@@ -1,0 +1,12 @@
+/* HERO SECTION MÁS LIMPIO (Exclusivo de index.html) */
+.hero-section {
+    background: linear-gradient(rgba(0, 51, 102, 0.4), rgba(0, 51, 102, 0.4)), 
+                url('https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_1536/https://turismo-en-argentina.com/wp-content/uploads/2020/07/14074819238_6c00f7f002_o-1536x863.jpg') no-repeat center center;
+    background-size: cover;
+    height: 100vh; /* Ocupa toda la pantalla */
+}
+
+#titulo-hero {
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}

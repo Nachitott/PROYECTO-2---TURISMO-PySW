@@ -1,0 +1,7 @@
+.card-destino {
+    border: none;
+    transition: transform 0.3s ease;
+}
+.card-destino:hover {
+    transform: scale(1.05); /* Zoom del punto 19 */
+}

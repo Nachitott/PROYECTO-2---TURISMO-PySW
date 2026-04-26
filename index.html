@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turismo Jujeño - Inicio</title>
+    
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    
+    <div id="header-placeholder"></div>
+
+    <main>
+        <header class="hero-section d-flex align-items-center text-center text-white">
+            <div class="container">
+                <h1 id="titulo-hero" class="display-3 fw-bold" style="display: none;">Descubrí la magia de Jujuy</h1>
+                <p class="lead mt-3">Paisajes inolvidables, cultura viva y aventura en cada rincón.</p>
+                
+                <a href="pages/destinos.html" class="btn btn-primary btn-lg mt-4 px-5">Explorar ahora</a>
+            </div>
+        </header>
+        <section id="destinos" class="py-5 bg-light">
+            <div class="container text-center mb-5">
+                <h2 class="fw-bold">Destinos Destacados</h2>
+                <hr class="mx-auto border-primary border-3 opacity-100" style="width: 60px;">
+            </div>
+            <div class="container">
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="card h-100 shadow-sm card-destino">
+                            <img src="https://images.unsplash.com/photo-1623343444988-1f6305a27891?auto=format&fit=crop&q=80&w=400" class="card-img-top" alt="Salinas Grandes">
+                            <div class="card-body">
+                                <h5 class="card-title">Salinas Grandes</h5>
+                                <p class="card-text">Un desierto de sal blanco infinito bajo el cielo más azul.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 shadow-sm card-destino">
+                            <img src="https://images.unsplash.com/photo-1599839343720-b8764042c6c2?auto=format&fit=crop&q=80&w=400" class="card-img-top" alt="Tilcara">
+                            <div class="card-body">
+                                <h5 class="card-title">Pucará de Tilcara</h5>
+                                <p class="card-text">Historia prehispánica en el corazón de la Quebrada.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 shadow-sm card-destino">
+                            <img src="https://images.unsplash.com/photo-1589410141381-80fc4a259b1d?auto=format&fit=crop&q=80&w=400" class="card-img-top" alt="Hornocal">
+                            <div class="card-body">
+                                <h5 class="card-title">Serranías del Hornocal</h5>
+                                <p class="card-text">El imponente cerro de los 14 colores a 4.700 msnm.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-5 bg-primary text-white text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h2 class="contador" data-target="150">0</h2>
+                        <p>Excursiones</p>
+                    </div>
+                    <div class="col-md-4">
+                        <h2 class="contador" data-target="2500">0</h2>
+                        <p>Turistas Felices</p>
+                    </div>
+                    <div class="col-md-4">
+                        <h2 class="contador" data-target="14">0</h2>
+                        <p>Colores en el Cerro</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
+</html>
