@@ -35,10 +35,6 @@ body {
     }
 }
 
-.dest:hover{
-    color: #000;
-}
-
 
 /* --- 2. Navbar (Elegante, Legible y con Estado Activo) --- */
 .navbar {
