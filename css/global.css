@@ -10,6 +10,17 @@ body {
     color: #333;
 }
 
+
+/* INTERACTIVIDAD CON EL MEGAMENU*/
+
+@media (min-width= 992px) {
+    .dropdown:hover .dropdown-mega {
+        display: block;
+        margin-top: 0; /* Evita que se cierre si hay un hueco entre el link y el menú */
+
+    }
+}
+
 /* --- 2. Navbar (Elegante, Legible y con Estado Activo) --- */
 .navbar {
     background-color: var(--azul-sismotur) !important; /* Azul oscuro fijo siempre */
