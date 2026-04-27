@@ -13,13 +13,32 @@ body {
 
 /* INTERACTIVIDAD CON EL MEGAMENU*/
 
-@media (min-width= 992px) {
-    .dropdown:hover .dropdown-mega {
-        display: block;
-        margin-top: 0; /* Evita que se cierre si hay un hueco entre el link y el menú */
+/* Solo para computadoras (Desktop) */
+@media (min-width: 992px) {
+    /* 1. Forzamos que el menú se muestre cuando el mouse está sobre el LI padre */
+    .nav-item.dropdown:hover > .dropdown-menu {
+        display: block !important;
+        opacity: 1;
+        visibility: visible;
+        /* Quitamos el delay de Bootstrap para que sea instantáneo */
+        margin-top: 1; 
+    }
 
+    /* 2. Truco de UX: Creamos un "puente" invisible para que el menú no se cierre 
+       si el mouse pasa por el pequeño hueco entre el link y el cuadro */
+    .dropdown-menu {
+        border-top: 20px solid transparent;
+        background-clip: padding-box;
+        margin-top: -20px !important;
+        background-color: #84c6db;
+        visibility: 50;
     }
 }
+
+.dest:hover{
+    color: #000;
+}
+
 
 /* --- 2. Navbar (Elegante, Legible y con Estado Activo) --- */
 .navbar {
