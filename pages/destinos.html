@@ -58,51 +58,62 @@
                 </div>
             </div>
 
-            <div id="seccion-precios" class="mt-5 pt-5 border-top">
-                <h2 class="text-center fw-bold mb-2">Planes y Tarifas</h2>
-                <p class="text-center text-muted mb-5">Comparativa de paquetes y servicios incluidos.</p>
+            <div class="d-block d-lg-none text-end mb-2">
+    <small class="text-primary fw-bold">
+        <i class="fa-solid fa-arrows-left-right"></i> Deslizá la tabla para ver más
+    </small>
+</div>
 
-                <div class="table-responsive tabla-precios bg-white shadow-sm rounded">
-                    <table class="table text-center mb-0">
-                        <thead>
-                            <tr>
-                                <th class="text-start">Paquete Turístico</th>
-                                <th>Alojamiento</th>
-                                <th>Excursiones</th>
-                                <th>Comidas</th>
-                                <th>Valor Final</th>
-                                <th></th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="text-start fw-bold">Escapada Express</td>
-                                <td>Hostel</td>
-                                <td>1 Excursión <i class="fa-solid fa-circle-info text-primary" data-bs-toggle="tooltip" title="Salinas Grandes o Quebrada."></i></td>
-                                <td>Desayuno</td>
-                                <td class="precio-destacado">$55.000</td>
-                                <td><button class="btn btn-sm btn-outline-primary rounded-pill btn-reservar" data-plan="Escapada Express">Reservar</button></td>
-                            </tr>
-                            <tr>
-                                <td class="text-start fw-bold">Aventura Clásica</td>
-                                <td>Hotel 3*</td>
-                                <td>3 Excursiones <i class="fa-solid fa-circle-info text-primary" data-bs-toggle="tooltip" title="Salinas, Quebrada y Pucará."></i></td>
-                                <td>Media Pensión</td>
-                                <td class="precio-destacado">$120.000</td>
-                                <td><button class="btn btn-sm btn-primary rounded-pill btn-reservar" data-plan="Aventura Clásica">Reservar</button></td>
-                            </tr>
-                            <tr>
-                                <td class="text-start fw-bold">Experiencia Puna VIP</td>
-                                <td>Hotel Boutique</td>
-                                <td>Full Access <i class="fa-solid fa-circle-info text-primary" data-bs-toggle="tooltip" title="Todas las excursiones + Guía privado."></i></td>
-                                <td>All Inclusive</td>
-                                <td class="precio-destacado">$280.000</td>
-                                <td><button class="btn btn-sm btn-outline-primary rounded-pill btn-reservar" data-plan="Experiencia Puna VIP">Reservar</button></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
+<div class="table-responsive shadow-sm rounded">
+    <table class="table table-hover text-center mb-0 align-middle text-nowrap">
+        
+        <thead class="bg-dark text-white">
+            <tr>
+                <th class="text-start py-3">PAQUETE TURÍSTICO</th>
+                <th class="py-3">ALOJAMIENTO</th>
+                <th class="py-3">EXCURSIONES</th>
+                <th class="py-3">COMIDAS</th>
+                <th class="py-3">VALOR FINAL</th>
+                <th class="py-3"></th>
+            </tr>
+        </thead>
+        
+        <tbody class="bg-white">
+            <tr>
+                <td class="text-start fw-bold">Escapada Express</td>
+                <td>Hostel (Compartido)</td>
+                <td>1 Excursión 
+                    <i class="fa-solid fa-circle-info text-primary ms-1" data-bs-toggle="tooltip" title="Salinas Grandes o Quebrada."></i>
+                </td>
+                <td>Solo Desayuno</td>
+                <td class="fw-bold fs-5 text-dark">$55.000</td>
+                <td><button class="btn btn-sm btn-outline-primary rounded-pill px-3">Reservar</button></td>
+            </tr>
+
+            <tr>
+                <td class="text-start fw-bold">Aventura Clásica</td>
+                <td>Hotel 3 Estrellas</td>
+                <td>3 Excursiones 
+                    <i class="fa-solid fa-circle-info text-primary ms-1" data-bs-toggle="tooltip" title="Incluye: Salinas Grandes, Quebrada y Pucará."></i>
+                </td>
+                <td>Media Pensión</td>
+                <td class="fw-bold fs-5 text-dark">$120.000</td>
+                <td><button class="btn btn-sm btn-outline-primary rounded-pill px-3">Reservar</button></td>
+            </tr>
+
+            <tr>
+                <td class="text-start fw-bold">Experiencia Puna VIP</td>
+                <td>Hotel Boutique 4*</td>
+                <td>Full Access 
+                    <i class="fa-solid fa-circle-info text-primary ms-1" data-bs-toggle="tooltip" title="Guía privado + Traslados."></i>
+                </td>
+                <td>All Inclusive</td>
+                <td class="fw-bold fs-5 text-dark">$280.000</td>
+                <td><button class="btn btn-sm btn-outline-primary rounded-pill px-3">Reservar</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
 
         </div>
     </main>

@@ -1,37 +1,64 @@
+<style>
+    /* Reglas EXCLUSIVAS para la PC (Pantallas grandes) */
+    @media (min-width: 992px) {
+        /* Abre el menú con solo pasar el mouse */
+        .dropdown-mega:hover .dropdown-menu {
+            display: block;
+        }
+        
+        /* El diseño de la "Tarjeta Flotante" */
+        .dropdown-mega .dropdown-menu {
+            width: 650px; 
+            right: 1; 
+            left: auto;
+            top: 200%; 
+            border-radius: 15px; 
+            border: 1px solid rgba(0,0,0,0.05); 
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1) !important; 
+            margin-top: 10px; /* Separación sutil de la barra */
+        }
+    }
+</style>
+
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
     <div class="container">
+        
         <a class="navbar-brand" href="index.html">
             <i class="fa-solid fa-mountain-sun text-primary"></i> JujuyTurismo
         </a>
+        
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
         </button>
+        
         <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
+            <ul class="navbar-nav ms-auto align-items-lg-center">
                 <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                 
-                <li class="nav-item dropdown dropdown-mega position-static">
-                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Destinos</a>
-                    <div class="dropdown-menu shadow  p-4">
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <h6 class="fw-bold text-primary border-bottom pb-2 ps-2">Quebrada</h6>
-                                    <ul class="list-unlysted">
-                                        <li><a class="dropdown-item" href="destinos.html">Purmamarca</a></li>
-                                        <li><a class="dropdown-item" href="destinos.html">Tilcara</a></li>
-                                        <li><a class="dropdown-item" href="destinos.html">Humahuaca</a></li>
-                                    </ul>
-                                </div>
-                                <div class="col-md-4">
-                                    <h6 class="fw-bold text-primary border-bottom pb-2 ps-2">Puna</h6>
-                                    <ul class="list-unlysted">
-                                        <li><a class="dropdown-item" href="destinos.html">Salinas Grandes</a></li>
-                                        <li><a class="dropdown-item" href="destinos.html">Susques</a></li>
-                                    </ul>
-                                </div>
-                                <div class="col-md-4">
-                                    <img src="../img/quebrada.jpg" class="img-fluid rounded" alt="Jujuy">
-                                </div>
+                <li class="nav-item dropdown dropdown-mega d-flex align-items-center">
+                    
+                    <a class="nav-link pe-1" href="destinos.html">Destinos</a>
+                    <a class="nav-link dropdown-toggle px-1" href="#" data-bs-toggle="dropdown"></a>
+                    
+                    <div class="dropdown-menu p-4 bg-white">
+                        <div class="row g-4">
+                            <div class="col-md-4">
+                                <h6 class="fw-bold text-primary border-bottom pb-2">Quebrada</h6>
+                                <ul class="list-unstyled">
+                                    <li><a class="dropdown-item px-0 text-secondary" href="destinos.html">Purmamarca</a></li>
+                                    <li><a class="dropdown-item px-0 text-secondary" href="destinos.html">Tilcara</a></li>
+                                    <li><a class="dropdown-item px-0 text-secondary" href="destinos.html">Humahuaca</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-md-4">
+                                <h6 class="fw-bold text-primary border-bottom pb-2">Puna</h6>
+                                <ul class="list-unstyled">
+                                    <li><a class="dropdown-item px-0 text-secondary" href="destinos.html">Salinas Grandes</a></li>
+                                    <li><a class="dropdown-item px-0 text-secondary" href="destinos.html">Susques</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-md-4 d-none d-lg-block">
+                                <img src="../img/quebrada.jpg" class="img-fluid rounded-3 shadow-sm" alt="Jujuy">
                             </div>
                         </div>
                     </div>
@@ -40,7 +67,10 @@
                 <li class="nav-item"><a class="nav-link" href="agencias.html">Agencias</a></li>
                 <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
                 <li class="nav-item"><a class="nav-link" href="precios.html">Precios</a></li>
-                <li class="nav-item"><a class="nav-link btn btn-primary text-white ms-lg-3 px-4" href="contacto.html">Contacto</a></li>
+                
+                <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
+                    <a class="nav-link btn btn-primary text-white px-4 shadow-sm rounded-pill" href="contacto.html">Contacto</a>
+                </li>
             </ul>
         </div>
     </div>
