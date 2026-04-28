@@ -14,26 +14,26 @@ body {
 /* INTERACTIVIDAD CON EL MEGAMENU*/
 
 /* Solo para computadoras (Desktop) */
-@media (min-width: 992px) {
-    /* 1. Forzamos que el menú se muestre cuando el mouse está sobre el LI padre */
-    .nav-item.dropdown:hover > .dropdown-menu {
-        display: block !important;
-        opacity: 1;
-        visibility: visible;
-        /* Quitamos el delay de Bootstrap para que sea instantáneo */
-        margin-top: 1; 
+
+    /* Reglas EXCLUSIVAS para la PC (Pantallas grandes) */
+    @media (min-width: 992px) {
+        /* Abre el menú con solo pasar el mouse */
+        .dropdown-mega:hover .dropdown-menu {
+            display: block;
+        }
+        
+        /* El diseño de la "Tarjeta Flotante" */
+        .dropdown-mega .dropdown-menu {
+            width: 650px; 
+            left: auto;
+            top: 100%; 
+            border-radius: 15px; 
+            border: 1px solid rgba(0,0,0,0.05); 
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1) !important; 
+            margin-top: 1px; /* Separación sutil de la barra */
+        }
     }
 
-    /* 2. Truco de UX: Creamos un "puente" invisible para que el menú no se cierre 
-       si el mouse pasa por el pequeño hueco entre el link y el cuadro */
-    .dropdown-menu {
-        border-top: 20px solid transparent;
-        background-clip: padding-box;
-        margin-top: -20px !important;
-        background-color: #84c6db;
-        visibility: 50;
-    }
-}
 
 .dest:hover{
     color: #000;

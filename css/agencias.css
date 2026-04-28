@@ -44,15 +44,15 @@
 }
 
 /* --- SISTEMA DE ESTRELLAS --- */
-.star-rating {
-    font-size: 1.5rem;
-    color: #ccc; /* Estrellas grises por defecto */
+/* Le ponemos la manito para que el usuario sepa que se hace clic */
+.star-rating i {
     cursor: pointer;
+    transition: transform 0.2s ease; /* Efecto suave */
 }
 
-/* Clases que agregará jQuery */
-.star-rating .fa-star.hovered,
-.star-rating .fa-star.checked {
-    color: #ffc107; /* Amarillo brillante */
-    text-shadow: 0 0 5px rgba(255, 193, 7, 0.5);
+/* El truco: Cuando tu JS agrega 'hovered' o 'checked', rellenamos la estrella */
+.star-rating i.hovered, 
+.star-rating i.checked {
+    font-weight: 900; /* En FontAwesome, 900 significa "Solid" (Relleno) */
+    transform: scale(1.1); /* Hacemos que se agrande un poquitito */
 }

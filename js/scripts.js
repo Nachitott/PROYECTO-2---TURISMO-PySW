@@ -14,14 +14,19 @@ $(document).ready(function() {
             $('a.navbar-brand').attr('href', '../index.html');
             $('a.nav-link:contains("Home")').attr('href', '../index.html');
             $('a.nav-link:contains("Agencias")').attr('href', 'agencias.html');
+            $('a.nav-link:contains("Destinos")').attr('href', 'destinos.html');
             $('a.nav-link:contains("Blog")').attr('href', 'blog.html');
             $('a.nav-link:contains("Contacto")').attr('href', 'contacto.html');
+            $('a.nav-link:contains("Precios")').attr('href', 'precios.html');
+
         } else {
             $('a.navbar-brand').attr('href', '#');
             $('a.nav-link:contains("Home")').attr('href', '#');
             $('a.nav-link:contains("Agencias")').attr('href', 'pages/agencias.html');
+            $('a.nav-link:contains("Destinos")').attr('href', 'pages/destinos.html');
             $('a.nav-link:contains("Blog")').attr('href', 'pages/blog.html');
             $('a.nav-link:contains("Contacto")').attr('href', 'pages/contacto.html');
+            $('a.nav-link:contains("Precios")').attr('href', 'pages/precios.html');
         }
 
         // --- ESTO ES LO NUEVO: MARCAR LA PÁGINA ACTUAL ---
@@ -35,6 +40,8 @@ $(document).ready(function() {
             $('a.nav-link:contains("Blog")').addClass('active');
         } else if (rutaActual.includes('contacto.html')) {
             $('a.nav-link:contains("Contacto")').addClass('active');
+        } else if (rutaActual.includes('precios.html')) {    
+            $('a.nav-link:contains("Precios")').addClass('active');
         } else {
             // Si no es ninguna de las anteriores, estamos en el Home
             $('a.nav-link:contains("Home")').addClass('active'); 
@@ -294,3 +301,21 @@ $(document).ready(function() {
     });
 
 });
+// --- NUEVO: AUTO-FILTRADO DESDE EL MEGA MENÚ ---
+    // Ponemos un pequeño "delay" (setTimeout) para darle tiempo a la página a cargar bien
+    setTimeout(function() {
+        let hash = window.location.hash; 
+        
+        if (hash) {
+            // Le sacamos el "#" para que quede solo la palabra (ej: "quebrada")
+            let categoriaMenu = hash.replace('#', ''); 
+            
+            // Buscamos el botón correspondiente y le hacemos un "clic fantasma"
+            $('.filter-btn[data-filter="' + categoriaMenu + '"]').click();
+            
+            // Hacemos un pequeño scroll para que la página baje justo hasta la galería
+            $('html, body').animate({
+                scrollTop: $('#galeria-destinos').offset().top - 120 
+            }, 500);
+        }
+    }, 200); // 200 milisegundos de espera
